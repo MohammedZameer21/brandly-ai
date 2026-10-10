@@ -4,10 +4,10 @@
 Professionals know they should build a clear presence, but positioning, profile copy and posting often feel disconnected. BrandPilot links those pieces to one goal.
 
 **0:30–1:00 — Load the demo**  
-Click **Preview with a demo**. Introduce Aisha as a fictional computer science student with project experience who wants an internship. Point out her audience, platform and weekly time budget.
+Click **Preview with a demo**. Use the first-person introduction: “I’m Sai, a market executive focused on freelancing and trading for investors.” Highlight your TradeMeet 2025 Aspirer achievement, LinkedIn platform and influencer discovery set to Yes.
 
 **1:00–2:00 — Identity and strategy**  
-Open **Brand identity** to show how her role, skills, projects, audience and goal shape the headline and bio. Open **Content strategy** and show the project, skills and learning themes. Copy a post idea to demonstrate a usable action.
+Open **Brand identity** to review how your role, skills, achievement, investor audience and marketing goal shape your headline and bio. Open **Content strategy** and explore your freelancing, trading and market insight themes. Copy a post idea to demonstrate a usable action.
 
 **2:00–2:45 — Calendar and checklist**  
 Open **Weekly calendar**. Show the three-post plan derived from three available hours, edit a topic or status, and export the plan as CSV. Open **Profile checklist** and mark an item complete.

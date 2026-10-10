@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { analyze, calculate, calendar, pillars, validProfile, type Profile } from './App';
+import { defaultInfluencerPreferences, demoInfluencers, isPreference, isSharedPackage, matchInfluencer } from './influencerData';
 
 const aisha:Profile={name:'Aisha Khan',type:'Student',role:'Third-year computer science student',skills:'Python, machine learning, React, data analysis',experience:'Two academic projects: a recommendation system.',goal:'Secure an internship',audience:'Recruiters and software / AI professionals',platform:'LinkedIn',tone:'Professional',time:3,bio:''};
 
@@ -41,5 +42,27 @@ describe('BrandPilot scoring and planning rules',()=>{
  it('flags a bio edit that drops the intended audience',()=>{
   const result=analyze({...aisha,bio:'I am a Python developer.'},pillars(aisha),calendar(aisha,pillars(aisha)));
   expect(result.issues.some(x=>x.title==='Reconnect your bio with its audience')).toBe(true);
+ });
+});
+
+describe('Influencer matching and local data validation',()=>{
+ it('returns a bounded, explainable match score that responds to platform preference',()=>{
+  const linkedin={...defaultInfluencerPreferences(aisha),enabled:true,niche:'AI education',audience:'students learning machine learning',region:'South Asia',platform:'LinkedIn' as const};
+  const instagram={...linkedin,platform:'Instagram' as const};
+  const eli=demoInfluencers.find(x=>x.id==='creator-eli')!;
+  const aya=demoInfluencers.find(x=>x.id==='creator-aya')!;
+  const eliScore=matchInfluencer(eli,linkedin,aisha);
+  const ayaScore=matchInfluencer(aya,instagram,aisha);
+  expect(eliScore.score).toBeGreaterThanOrEqual(0);
+  expect(eliScore.score).toBeLessThanOrEqual(100);
+  expect(eliScore.reason).toContain('Recommended because');
+  expect(eliScore.score).toBeGreaterThan(matchInfluencer(eli,instagram,aisha).score);
+  expect(ayaScore.score).toBeGreaterThan(matchInfluencer(aya,linkedin,aisha).score);
+ });
+ it('rejects malformed preference enums and malformed stored package snapshots',()=>{
+  const preferences=defaultInfluencerPreferences(aisha);
+  expect(isPreference(preferences)).toBe(true);
+  expect(isPreference({...preferences,platform:'MySpace'})).toBe(false);
+  expect(isSharedPackage({id:'bad',campaignName:'x',objective:'x',creators:[{}],posts:[],message:'',createdAt:'now',shareMethod:'Delivered'})).toBe(false);
  });
 });

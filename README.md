@@ -36,7 +36,7 @@ Data is stored only in the current browser. There is no account, sync, external 
 
 ## Demo
 
-Click **Preview with a demo** on the landing page (or **Reload demo** in the workspace) to load Aisha Khan, a fictional third-year computer science student pursuing an internship. The profile has three hours per week available, so the calendar suggests three posts. All generated outputs are labeled as sample mode.
+Click **Preview with a demo** on the landing page (or **Reload demo** in the workspace) to load the sample profile named Sai. The sample uses first-person brand copy, a Market executive role, freelancing and trading skills, the “TradeMeet 2025 Aspirer” achievement, and investors as the target audience. Influencer discovery is set to Yes. The profile has three hours per week available, so the calendar suggests three posts. All generated outputs are labeled as sample mode.
 
 See [DEMO.md](./DEMO.md) for a four-minute presentation outline.
 

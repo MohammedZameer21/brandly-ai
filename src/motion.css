@@ -1,0 +1,24 @@
+@keyframes bp-soft-in{from{opacity:0;transform:translateY(7px) scale(.99)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes bp-backdrop-in{from{opacity:0}to{opacity:1}}
+@keyframes bp-toast-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* Small feedback cues keep controls feeling responsive without adding visual noise. */
+.btn,.sidebar nav button,.hub-tabs button,.filter-tabs button,.choice-card,.creator-chip,.week-day,.check-button{transition:transform .16s ease,background-color .18s ease,color .18s ease,border-color .18s ease,box-shadow .18s ease}
+.btn:active,.sidebar nav button:active,.hub-tabs button:active,.filter-tabs button:active,.choice-card:active,.creator-chip:active,.check-button:active{transform:scale(.975)}
+.sidebar nav button:not(.selected):hover{transform:translateX(2px);background:#f0f4ed}
+.sidebar nav button.selected{box-shadow:inset 3px 0 #6f9a6b}
+.filter-tabs button:hover:not(.active),.hub-tabs button:hover:not(.active){background:#f2f5ef;color:#355f3e}
+.choice-card:hover{transform:translateY(-1px);border-color:#bdcfb8;box-shadow:0 5px 14px #273d2310}
+.choice-card.active .choice-check{animation:bp-soft-in .2s ease both}
+.btn.primary:hover{box-shadow:0 7px 17px #24503d2b}
+.calendar-search input:focus,.market-search:focus-within{border-color:#91af8b;box-shadow:0 0 0 3px #80a47b20}
+.calendar-field input:focus,.calendar-field select:focus,.campaign-form-grid input:focus,.campaign-form-grid textarea:focus,.campaign-form-grid select:focus,.preference-fields input:focus,.preference-fields select:focus{outline:0;border-color:#91af8b;box-shadow:0 0 0 3px #80a47b1b}
+.post-card:focus-within{border-color:#c9dbc5;box-shadow:0 8px 24px #263d2410}
+.hub-modal-backdrop{animation:bp-backdrop-in .18s ease both}
+.hub-modal{animation:bp-soft-in .22s cubic-bezier(.2,.7,.2,1) both}
+.toast,.share-success{animation:bp-toast-in .2s cubic-bezier(.2,.7,.2,1) both}
+.preference-fields{animation:bp-soft-in .22s ease both}
+.selected-chip-row .creator-chip:hover{transform:translateY(-1px);border-color:#b8cdb3;background:#f2f7ef}
+.creator-card:focus-within{border-color:#bcd0b8}
+
+@media(prefers-reduced-motion:reduce){.btn,.sidebar nav button,.hub-tabs button,.filter-tabs button,.choice-card,.creator-chip,.week-day,.check-button{transition:none!important}.hub-modal-backdrop,.hub-modal,.toast,.share-success,.preference-fields,.choice-card.active .choice-check{animation:none!important}}

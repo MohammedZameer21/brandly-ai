@@ -1,0 +1,71 @@
+/* BrandPilot visual theme: botanical greens, warm canvas, and clear white surfaces. */
+:root{--bp-forest:#244f3d;--bp-leaf:#6e966b;--bp-ink:#263329;--bp-muted:#697469;--bp-line:#e2e9df;--bp-canvas:#f4f7f2}
+body{background:var(--bp-canvas);color:var(--bp-ink)}
+.shell{background:radial-gradient(ellipse at 92% 0%,#dcebd966 0,transparent 28%),linear-gradient(145deg,#f7f9f5 0%,#f1f5ef 100%)}
+.sidebar{background:rgba(255,255,255,.91);border-right-color:#e1e8df;box-shadow:6px 0 28px #243b2407;backdrop-filter:blur(10px)}
+.workspace{background:linear-gradient(135deg,#f6f9f4,#edf4e9);border-color:#e0e9dc;border-radius:12px}
+.sidebar nav{gap:4px}
+.sidebar nav button{border-radius:9px;color:#697368}
+.sidebar nav button.selected{background:linear-gradient(100deg,#edf4e9,#f5f8f2);color:#28513d}
+.header{background:rgba(255,255,255,.87);border-bottom-color:#e3e9e1;backdrop-filter:blur(12px)}
+.content>.title .eyebrow{display:inline-flex;align-items:center;min-height:22px;padding:4px 8px;border:1px solid #e2ebdf;border-radius:20px;background:#f0f5ed;color:#52754e}
+.content>.title h1{color:#26362b}
+.content .card{border-color:#e1e8df;border-radius:14px;background:rgba(255,255,255,.96);box-shadow:0 5px 18px #233a2108}
+.content .positioning{position:relative;overflow:hidden;background:radial-gradient(ellipse at 100% 0%,#e2efddaa,transparent 36%),linear-gradient(135deg,#fff 25%,#f7faf5 100%);border:1px solid #dce8d9;border-top:3px solid #78a275;box-shadow:0 9px 28px #2945260c}
+.content .positioning h2{color:#283d2e}
+.soft-tag{border:1px solid #e0eadb;background:#edf4e9;color:#4b704b}
+.score-circle{background:radial-gradient(circle,#fff 58%,#f3f8f0 60%);box-shadow:0 3px 12px #315b3510}
+.progress{background:#eaf0e7;border-radius:20px;overflow:hidden}
+.progress>span{background:linear-gradient(90deg,#8aaf7f,#54815b);border-radius:inherit}
+.btn.primary{background:linear-gradient(135deg,#2f6548,#214b39);box-shadow:0 6px 16px #244f3d25}
+.btn.outline{border-color:#dfe7dd;background:#fff}
+.notice{border-color:#dfe9da;border-radius:12px;background:linear-gradient(120deg,#eff6eb,#f6f9f4)}
+.week-overview{border-color:#e0e8dd;border-radius:14px;background:linear-gradient(145deg,#fff,#f8faf6);box-shadow:0 4px 16px #243b2408}
+.week-day{border-color:#e5ebe2;background:linear-gradient(180deg,#fff,#fafcf9)}
+.week-day.has-post{background:linear-gradient(145deg,#eff6ec,#e9f2e5);border-color:#d8e6d4}
+.post-card{border:1px solid #e1e8df;border-radius:13px;background:#fff;box-shadow:0 4px 15px #273e2408}
+.post-card-top{background:#f8faf7;border-bottom-color:#e8eee6}
+.hub-intro,.hub-filters,.creator-card,.campaign-card,.history-card,.hub-modal{border-color:#e0e8dd;border-radius:13px;box-shadow:0 5px 18px #263d240b}
+.hub-intro{background:linear-gradient(120deg,#fff,#f5f9f2)}
+.hub-disclosure{border:1px solid #e2ebdf;background:linear-gradient(120deg,#f2f7ef,#f8faf6)}
+.creator-avatar{background:linear-gradient(145deg,#eaf3e6,#dcebd8);box-shadow:inset 0 0 0 1px #d8e5d4}
+.creator-card{background:linear-gradient(160deg,#fff 50%,#fbfcfa)}
+.hub-modal-backdrop{background:rgba(24,39,29,.64);backdrop-filter:blur(5px)}
+.hub-modal{box-shadow:0 28px 90px #17291d38}
+.app-footer{background:rgba(248,250,247,.94);border-top-color:#e0e8dd;backdrop-filter:blur(10px)}
+.landing{background:radial-gradient(ellipse at 84% 8%,#e1eedc 0,transparent 29%),linear-gradient(150deg,#f9faf7,#f3f7f1 80%)}
+.landing nav{background:rgba(249,250,247,.72);backdrop-filter:blur(12px)}
+.hero-art .preview{border-color:#e1e9de;box-shadow:0 26px 75px #213c281c}
+
+@media(max-width:700px){
+  .sidebar{background:rgba(255,255,255,.97)}
+  .content .card{border-radius:12px}
+  .content .positioning{background:radial-gradient(ellipse at 100% 0%,#e2efdd88,transparent 40%),linear-gradient(135deg,#fff,#f7faf5)}
+}
+
+/* Pricing gives the planned Pro offer a clear, premium visual hierarchy. */
+.pricing{grid-template-columns:minmax(0,.78fr) minmax(0,1.4fr);gap:48px;align-items:center}
+.pricing-copy h2{max-width:440px}
+.pricing-disclaimer{margin-top:18px;padding-left:12px;border-left:2px solid #87a980;font-size:10px!important;line-height:1.6!important;color:#71806e!important}
+.pricing-plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:stretch}
+.pricing-card{display:flex;flex-direction:column;min-width:0;min-height:100%;padding:21px!important;border:1px solid #e0e8dd!important;border-radius:16px!important;box-shadow:0 12px 32px #243b240d!important}
+.pricing-card>span,.premium-plan-top>span:first-child{font-size:9px;letter-spacing:.9px;color:#70806e;font-weight:800}
+.pricing-card h3{margin:16px 0 18px;font-size:32px;letter-spacing:-1.1px;color:#293d2d}
+.pricing-card h3 small{font-size:11px;letter-spacing:0;color:#7b8478}
+.pricing-card>p{font-size:10px;line-height:1.55}
+.pricing-card .btn{margin-top:auto;min-height:42px}
+.premium-plan{position:relative;overflow:hidden;color:#f8fbf7!important;background:radial-gradient(ellipse at 100% 0%,#628b654d,transparent 43%),linear-gradient(150deg,#244f3d,#18382c)!important;border:1px solid #244f3d!important;box-shadow:0 18px 42px #244f3d2c!important}
+.premium-plan:after{position:absolute;inset:auto -46px -65px auto;width:180px;height:180px;border:1px solid #ffffff16;border-radius:50%;content:"";pointer-events:none}
+.premium-plan-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.premium-plan .premium-plan-top>span:first-child{color:#c7dbc1}
+.premium-badge{display:inline-flex;align-items:center;gap:4px;padding:5px 7px;border:1px solid #ffffff27;border-radius:20px;background:#ffffff12;color:#d6e6d0;font-size:8px;font-weight:800;letter-spacing:.5px}
+.premium-plan h3{color:#fff}
+.premium-plan h3 small{color:#d4e0d1}
+.premium-plan .premium-summary{min-height:46px;margin:0 0 10px;color:#d5e0d3;font-size:10px;line-height:1.6}
+.premium-features{display:grid;gap:3px;margin-bottom:16px}
+.premium-features p{display:flex!important;align-items:flex-start!important;gap:8px!important;margin:7px 0!important;color:#e5eee3!important;font-size:10px!important;line-height:1.5!important}
+.premium-features svg{width:14px;flex:none;margin-top:1px;color:#b8d5ad}
+.premium-plan .premium-cta{position:relative;z-index:1;background:#f5f8f2;color:#254b38;box-shadow:none;opacity:.9;cursor:default}
+.premium-note{position:relative;z-index:1;margin-top:9px;color:#bed1bb;font-size:8px;text-align:center;line-height:1.4}
+@media(max-width:950px){.pricing{grid-template-columns:1fr;gap:22px}.pricing-copy{max-width:680px}.pricing-plans{max-width:800px;width:100%;margin-inline:auto}}
+@media(max-width:700px){.pricing{padding:50px 18px}.pricing h2{font-size:31px}.pricing-plans{grid-template-columns:1fr}.pricing-card{padding:20px!important}.premium-plan .premium-summary{min-height:0}}
