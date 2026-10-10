@@ -1,0 +1,7 @@
+.pillar-name-edit{width:100%;border:1px solid transparent;border-radius:6px;padding:5px 6px;margin:9px 0 4px;background:transparent;font:700 17px Manrope;color:#222b21}
+.pillar-name-edit:focus,.pillar-description-edit:focus{border-color:#dfe7db;background:#fbfcfa}
+.pillar-description-edit{width:100%;min-height:52px;resize:vertical;border:1px solid transparent;border-radius:6px;padding:5px 6px;background:transparent;font:11px/1.65 'DM Sans',sans-serif;color:#71796f}
+.add-idea{white-space:nowrap;font-size:9px;align-self:center}
+.post-controls{display:grid;gap:9px}
+.status-select select{width:100%}
+@media(max-width:700px){.post-controls{grid-column:2;grid-template-columns:100px 100px;align-items:center}}
