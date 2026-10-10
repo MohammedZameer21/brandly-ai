@@ -103,4 +103,13 @@
 @media(hover:hover){.card:hover,.feature-grid article:hover{box-shadow:0 10px 26px #263d2410;border-color:#dfe7db}.check-item:hover{transform:translateY(-1px)}.link:hover,.text-btn:hover,.copy-btn:hover{color:#244f3d}}
 @media(max-width:950px){.pricing{grid-template-columns:minmax(0,1fr) 300px;gap:32px}}
 @media(max-width:700px){.pricing{grid-template-columns:minmax(0,1fr);gap:20px}.pricing article{width:100%}}
+
+/* Keep onboarding and other dialogs usable on shorter laptop screens. */
+.backdrop{z-index:30;overflow-y:auto;overscroll-behavior:contain;padding:clamp(12px,3vh,24px)}
+.wizard{height:auto;min-height:0;max-height:calc(100dvh - 24px);grid-template-rows:auto;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;touch-action:pan-y}
+.wizard>aside,.wizard-form{min-height:0;overflow:visible}
+.hub-modal-backdrop{overflow-y:auto;overscroll-behavior:contain;padding:clamp(12px,3vh,24px);align-items:center}
+.hub-modal{max-height:calc(100dvh - 24px);overscroll-behavior:contain}
+@media(max-width:700px){.wizard{height:auto;max-height:calc(100dvh - 24px);grid-template-rows:auto;overflow-x:hidden;overflow-y:auto}.wizard-form{padding-top:40px}.hub-modal{max-height:calc(100dvh - 24px)}}
+@media(max-height:720px){.wizard-form{padding-top:30px;padding-bottom:20px}.wizard-form h2{margin-top:18px}.wizard-form>.muted{margin-bottom:15px}.wizard-actions{margin-top:18px}.wizard>aside{padding:20px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.floating{animation:none!important}}

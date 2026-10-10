@@ -50,7 +50,7 @@ export default function CalendarShareDialog({ posts, prefs, savedIds, selectedId
   const downloadCsv = (item: SharedCalendarPackage) => {
     const headings = ['Date', 'Topic', 'Hook', 'Format', 'Pillar', 'Objective', 'CTA', 'Status'];
     const csv = [headings, ...item.posts.map(p => [dateName(p.date), p.topic, p.hook, p.format, p.pillar, p.objective, p.cta || '', p.status])].map(row => row.map(csvCell).join(',')).join('\r\n');
-    download(csv, 'brandpilot-influencer-calendar.csv', 'text/csv;charset=utf-8');
+    download(csv, 'brandly-influencer-calendar.csv', 'text/csv;charset=utf-8');
   };
   const downloadBrief = (item: SharedCalendarPackage) => {
     const escape = (s: string) => s.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c] || c));
@@ -91,4 +91,4 @@ export default function CalendarShareDialog({ posts, prefs, savedIds, selectedId
 }
 
 function download(content: string, filename: string, type: string) { const url = URL.createObjectURL(new Blob([content], { type })); const link = document.createElement('a'); link.href = url; link.download = filename; link.click(); window.setTimeout(() => URL.revokeObjectURL(url), 1000); }
-function slug(value: string) { return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'brandpilot'; }
+function slug(value: string) { return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'brandly'; }

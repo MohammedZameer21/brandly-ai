@@ -1,7 +1,7 @@
 # Four-minute demo outline
 
 **0:00–0:30 — The problem**  
-Professionals know they should build a clear presence, but positioning, profile copy and posting often feel disconnected. BrandPilot links those pieces to one goal.
+Professionals know they should build a clear presence, but positioning, profile copy and posting often feel disconnected. Brandly links those pieces to one goal.
 
 **0:30–1:00 — Load the demo**  
 Click **Preview with a demo**. Use the first-person introduction: “I’m Sai, a market executive focused on freelancing and trading for investors.” Highlight your TradeMeet 2025 Aspirer achievement, LinkedIn platform and influencer discovery set to Yes.

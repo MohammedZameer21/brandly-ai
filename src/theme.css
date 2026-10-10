@@ -1,4 +1,4 @@
-/* BrandPilot visual theme: botanical greens, warm canvas, and clear white surfaces. */
+/* Brandly visual theme: botanical greens, warm canvas, and clear white surfaces. */
 :root{--bp-forest:#244f3d;--bp-leaf:#6e966b;--bp-ink:#263329;--bp-muted:#697469;--bp-line:#e2e9df;--bp-canvas:#f4f7f2}
 body{background:var(--bp-canvas);color:var(--bp-ink)}
 .shell{background:radial-gradient(ellipse at 92% 0%,#dcebd966 0,transparent 28%),linear-gradient(145deg,#f7f9f5 0%,#f1f5ef 100%)}

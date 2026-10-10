@@ -1,6 +1,6 @@
-# BrandPilot AI
+# Brandly AI
 
-BrandPilot AI helps students, professionals and founders connect a clear professional story to a realistic content plan. This hackathon MVP includes profile onboarding, brand identity drafts, editable content pillars, the ability to add ideas to a weekly plan, an editable/reschedulable calendar, a profile-readiness checklist, an explainable readiness score and deterministic brand-consistency checks.
+Brandly AI helps students, professionals and founders connect a clear professional story to a realistic content plan. This hackathon MVP includes profile onboarding, brand identity drafts, editable content pillars, the ability to add ideas to a weekly plan, an editable/reschedulable calendar, a profile-readiness checklist, an explainable readiness score and deterministic brand-consistency checks.
 
 ## Run locally
 

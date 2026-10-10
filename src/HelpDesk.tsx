@@ -55,7 +55,7 @@ export default function HelpDesk({ onClose }: { onClose?: () => void }) {
 
   return <>
     <div className="title helpdesk-title">
-      <div><span className="eyebrow">BRANDPILOT SUPPORT</span><h1>How can we help?</h1><p>Send a support request and keep track of it here.</p></div>
+      <div><span className="eyebrow">BRANDLY SUPPORT</span><h1>How can we help?</h1><p>Send a support request and keep track of it here.</p></div>
       {onClose&&<button className="support-close" type="button" onClick={onClose} aria-label="Close support panel"><X size={18}/></button>}
     </div>
     <div className="notice helpdesk-notice"><LifeBuoy size={16}/><span><b>Demo mode.</b> Tickets are saved in this browser only and are not sent to a support team.</span></div>

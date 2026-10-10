@@ -4,7 +4,7 @@ import { defaultInfluencerPreferences, demoInfluencers, isPreference, isSharedPa
 
 const aisha:Profile={name:'Aisha Khan',type:'Student',role:'Third-year computer science student',skills:'Python, machine learning, React, data analysis',experience:'Two academic projects: a recommendation system.',goal:'Secure an internship',audience:'Recruiters and software / AI professionals',platform:'LinkedIn',tone:'Professional',time:3,bio:''};
 
-describe('BrandPilot scoring and planning rules',()=>{
+describe('Brandly scoring and planning rules',()=>{
  it('uses the declared score rubric and awards points from supplied profile data',()=>{
   const result=calculate(aisha,pillars(aisha),calendar(aisha,pillars(aisha)));
   expect(result.parts.map(x=>x[1])).toEqual([20,20,20,16,20]);
