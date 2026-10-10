@@ -38,3 +38,32 @@
 .helpdesk-side-note p{margin:0;color:#71806d;font-size:9px;line-height:1.6}
 @media(max-width:820px){.helpdesk-side-card{min-height:0}}
 @media(max-width:700px){.helpdesk-layout{gap:12px}.helpdesk-layout>.card{padding:16px}.helpdesk-form-footer{align-items:flex-start;flex-direction:column}.helpdesk-form-footer .btn{width:100%}}
+
+/* Floating support launcher and compact ticket panel */
+.support-widget{position:fixed;z-index:12;right:24px;bottom:22px;font-family:'DM Sans',sans-serif}
+.support-launcher{position:relative;display:flex;align-items:center;gap:10px;min-height:54px;padding:7px 17px 7px 8px;border:1px solid #d8e5d3;border-radius:30px;background:linear-gradient(135deg,#426e4b,#315c3c);color:#fff;box-shadow:0 8px 24px #2e553c38,0 2px 6px #203b2b26;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.support-launcher:hover{transform:translateY(-3px);box-shadow:0 12px 28px #2e553c45,0 2px 6px #203b2b26}
+.support-launcher:focus-visible,.support-close:focus-visible{outline:3px solid #a9c999;outline-offset:3px}
+.support-launcher-icon{width:38px;height:38px;display:grid;place-items:center;border-radius:50%;background:#ffffff20;color:#fff}
+.support-launcher-label{font-size:12px;font-weight:700;letter-spacing:.1px}
+.support-launcher-ping{position:absolute;top:1px;left:3px;width:10px;height:10px;border:2px solid #fff;border-radius:50%;background:#c7e591;box-shadow:0 0 0 0 #c7e591a6;animation:support-ping 2.4s ease-out infinite}
+.support-launcher.is-open .support-launcher-ping{display:none}
+.support-panel{position:absolute;right:0;bottom:70px;width:min(450px,calc(100vw - 32px));max-height:min(78vh,760px);overflow:auto;padding:20px;background:#fbfcfa;border:1px solid #e3e9df;border-radius:18px;box-shadow:0 20px 70px #1e302b30;transform-origin:bottom right;animation:support-panel-in .22s cubic-bezier(.2,.8,.2,1) both;overscroll-behavior:contain}
+.support-panel .helpdesk-title{align-items:flex-start;margin:0 0 14px;gap:12px}
+.support-panel .helpdesk-title h1{font-size:21px;margin:6px 0 3px}
+.support-panel .helpdesk-title p{font-size:11px}
+.support-close{flex:none;width:34px;height:34px;display:grid;place-items:center;border:1px solid #e7ebe3;border-radius:50%;background:#fff;color:#647060;cursor:pointer;transition:background .16s ease,color .16s ease,transform .16s ease}
+.support-close:hover{background:#edf4e9;color:#3d6945;transform:rotate(5deg)}
+.support-panel .helpdesk-notice{align-items:flex-start;padding:10px;margin-bottom:12px;font-size:10px;line-height:1.5}
+.support-panel .helpdesk-layout{grid-template-columns:1fr;gap:12px}
+.support-panel .helpdesk-layout>.card{padding:15px;border-radius:12px}
+.support-panel .helpdesk-card-heading{margin-bottom:13px}
+.support-panel .helpdesk-form{gap:11px}
+.support-panel .helpdesk-form textarea{min-height:86px}
+.support-panel .helpdesk-side-card{min-height:0}
+.support-panel .helpdesk-empty{min-height:105px}
+.support-panel .helpdesk-side-note{margin-top:10px}
+@keyframes support-ping{0%{box-shadow:0 0 0 0 #c7e591a6}70%{box-shadow:0 0 0 8px #c7e59100}100%{box-shadow:0 0 0 0 #c7e59100}}
+@keyframes support-panel-in{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:700px){.support-widget{right:15px;bottom:54px}.support-launcher{min-height:50px;padding-right:14px}.support-launcher-icon{width:36px;height:36px}.support-panel{bottom:64px;width:min(430px,calc(100vw - 24px));max-height:min(76vh,700px);padding:14px;border-radius:15px}}
+@media(prefers-reduced-motion:reduce){.support-launcher,.support-close{transition:none}.support-launcher-ping{animation:none}.support-panel{animation:none}}
