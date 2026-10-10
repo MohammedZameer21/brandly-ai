@@ -1,5 +1,5 @@
 import { useEffect, useState, type FormEvent } from 'react';
-import { ArrowUpRight, Check, Clock3, LifeBuoy, MessageSquareText, Send, TicketCheck } from 'lucide-react';
+import { ArrowUpRight, Check, Clock3, LifeBuoy, MessageSquareText, Send, TicketCheck, X } from 'lucide-react';
 
 type Ticket = {
   id: string;
@@ -22,7 +22,7 @@ function loadTickets(): Ticket[] {
   }
 }
 
-export default function HelpDesk() {
+export default function HelpDesk({ onClose }: { onClose?: () => void }) {
   const [tickets, setTickets] = useState<Ticket[]>(loadTickets);
   const [category, setCategory] = useState(categories[0]);
   const [subject, setSubject] = useState('');
@@ -54,8 +54,9 @@ export default function HelpDesk() {
   }
 
   return <>
-    <div className="title">
+    <div className="title helpdesk-title">
       <div><span className="eyebrow">BRANDPILOT SUPPORT</span><h1>How can we help?</h1><p>Send a support request and keep track of it here.</p></div>
+      {onClose&&<button className="support-close" type="button" onClick={onClose} aria-label="Close support panel"><X size={18}/></button>}
     </div>
     <div className="notice helpdesk-notice"><LifeBuoy size={16}/><span><b>Demo mode.</b> Tickets are saved in this browser only and are not sent to a support team.</span></div>
     <section className="helpdesk-layout" aria-label="Support desk">
